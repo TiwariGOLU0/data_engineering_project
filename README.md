@@ -8,7 +8,7 @@ The code has been meticulously crafted with careful consideration for various as
 - SQL
 - PySpark
 - Databricks
-- Azure Data Factory
+- AWS
 - ETL/ELT
 
 

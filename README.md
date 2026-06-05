@@ -7,7 +7,6 @@ The code has been meticulously crafted with careful consideration for various as
 - Python
 - SQL
 - PySpark
-- Databricks
 - AWS
 - ETL/ELT
 

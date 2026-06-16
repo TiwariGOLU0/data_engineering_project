@@ -1,0 +1,173 @@
+<style>
+  .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 12px; }
+  .badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 500; display: inline-block; }
+  .done { background: var(--color-background-success); color: var(--color-text-success); }
+  .progress { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .pending { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+  .tag { font-size: 11px; padding: 2px 8px; border-radius: 12px; display: inline-block; margin-right: 4px; margin-bottom: 4px; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .row:last-child { border-bottom: none; }
+  .tech { font-size: 12px; color: var(--color-text-secondary); }
+  h2 { font-size: 18px; font-weight: 500; margin: 0 0 4px; }
+  h3 { font-size: 14px; font-weight: 500; margin: 0 0 12px; color: var(--color-text-secondary); }
+  .layer-title { font-size: 13px; font-weight: 500; margin: 0 0 8px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .stat-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 16px; }
+  .stat-val { font-size: 24px; font-weight: 500; }
+  .stat-lbl { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+</style>
+
+<div style="padding: 0.5rem 0;">
+
+  <div style="margin-bottom: 20px;">
+    <h2>Data Engineering Project</h2>
+    <h3>Python + PySpark + AWS + Databricks — ETL/ELT Pipeline</h3>
+    <div class="grid2">
+      <div class="stat-card"><div class="stat-val">3</div><div class="stat-lbl">Environments (DEV/QA/PROD)</div></div>
+      <div class="stat-card"><div class="stat-val">6</div><div class="stat-lbl">Core modules built</div></div>
+      <div class="stat-card"><div class="stat-val">2</div><div class="stat-lbl">Mart transformations</div></div>
+      <div class="stat-card"><div class="stat-val">5+</div><div class="stat-lbl">Utility components</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="layer-title">Project structure</p>
+    <div class="row">
+      <span class="tech">docs/ — documentation folder</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">resources/ — configs per environment</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">src/main/ — core pipeline code</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">src/test/ — test scripts</span>
+      <span class="badge done">Done</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="layer-title">Environment configs — DEV / QA / PROD</p>
+    <div class="row">
+      <span class="tech">resources/dev/config.py + requirement.txt</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">resources/qa/config.py + requirement.txt</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">resources/prod/config.py + requirement.txt</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">resources/sql_scripts/table_scripts.sql</span>
+      <span class="badge done">Done</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="layer-title">AWS operations</p>
+    <div class="row">
+      <span class="tech">aws_read.py — S3 data reading</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">aws_file_download.py — S3 download</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">upload_to_s3.py — S3 upload</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">aws_delete.py — S3 delete</span>
+      <span class="badge done">Done</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="layer-title">Database operations</p>
+    <div class="row">
+      <span class="tech">database_read.py — MySQL read</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">database_write.py — MySQL write</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">database_delete.py — MySQL delete</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">parquet_write.py — Parquet output</span>
+      <span class="badge done">Done</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="layer-title">Transformations (PySpark)</p>
+    <div class="row">
+      <span class="tech">customer_mart_sql_transform_write.py</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">sales_mart_sql_transform_write.py</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">dimension_tables_join.py</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">main.py — pipeline orchestration</span>
+      <span class="badge done">Done</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="layer-title">Utility components</p>
+    <div class="row">
+      <span class="tech">encrypt_decrypt.py — credential security</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">logging_config.py — centralized logging</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">spark_session.py — Spark init</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">s3_client_object.py — AWS client</span>
+      <span class="badge done">Done</span>
+    </div>
+    <div class="row">
+      <span class="tech">my_sql_session.py — DB connection</span>
+      <span class="badge done">Done</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="layer-title">Tech stack used</p>
+    <div style="padding-top: 8px; display: flex; flex-wrap: wrap; gap: 8px;">
+      <span class="tag" style="background:var(--color-background-info);color:var(--color-text-info)">Python</span>
+      <span class="tag" style="background:var(--color-background-info);color:var(--color-text-info)">PySpark</span>
+      <span class="tag" style="background:var(--color-background-success);color:var(--color-text-success)">AWS S3</span>
+      <span class="tag" style="background:var(--color-background-success);color:var(--color-text-success)">Databricks</span>
+      <span class="tag" style="background:var(--color-background-warning);color:var(--color-text-warning)">MySQL</span>
+      <span class="tag" style="background:var(--color-background-warning);color:var(--color-text-warning)">ETL/ELT</span>
+      <span class="tag" style="background:var(--color-background-secondary);color:var(--color-text-secondary)">Parquet</span>
+      <span class="tag" style="background:var(--color-background-secondary);color:var(--color-text-secondary)">SQL</span>
+      <span class="tag" style="background:var(--color-background-secondary);color:var(--color-text-secondary)">DEV/QA/PROD configs</span>
+      <span class="tag" style="background:var(--color-background-secondary);color:var(--color-text-secondary)">Encryption</span>
+    </div>
+  </div>
+
+</div>

@@ -1,7 +1,5 @@
 # DE_Project
-Implemented environment-specific configurations for DEV, QA, and PROD deployments to simulate enterprise-grade ETL workflows.
-
-The code has been meticulously crafted with careful consideration for various aspects. It not only nurtures your coding skills but also imparts a comprehensive comprehension of project structures.
+This project implements an end-to-end ETL pipeline that reads data from AWS S3 and a relational database, applies transformations to build customer and sales data marts with proper dimension table joins, and writes the processed data back to S3 and the database in Parquet format. The pipeline supports environment-specific configurations for DEV, QA, and PROD, following enterprise-style deployment practices, and includes utility modules for logging, encryption/decryption, and Spark session management to keep the codebase production-aware.
 
 ## Skills Used in This Project:
 - Python
